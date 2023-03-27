@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+.mail{
+  width: 100%;
+  margin-top: 50px;
+  background-color: #05171C;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.mailInputContainer>input{
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.mailInputContainer>button{
+  height: 50px;
+  background-color: #142125;
+  color: white;
+  font-weight: 500;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mailTitle{
+  font-family: 'Poppins';
+  font-weight: 600;
+
+}
