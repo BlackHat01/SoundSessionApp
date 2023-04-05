@@ -1,42 +1,54 @@
+import useFetch from "../../hooks/useFetch";
 import "./featured.css";
 
 const Featured = () => {
+
+  const {data,loading,error} = useFetch("/api/artists/featured");
+
+  console.log(data)
+  
   return (
     <div className="featured">
-      <div className="featuredItem">
+      {loading ? (
+        "Loading..."
+      ) : (
+        <><div className="featuredItem">
         <img
-          src="https://i.guim.co.uk/img/media/fb58f602d8d2ddb7353c5b176c9d35d926b2c10e/0_85_3264_1958/master/3264.jpg?width=1200&quality=85&auto=format&fit=max&s=2ba36a8016cb62a0eb93fb5d5ccb0492"
+          src={data[0].image}
           alt=""
           className="featuredImg"
         />
         <div className="featuredTitles">
-          <h1>Emily Sullivan</h1>
-          <h2>Recording engineer</h2>
+          <h1>{data[0].name}</h1>
+          <h2>{data[0].type}</h2>
         </div>
       </div>
       
       <div className="featuredItem">
         <img
-          src="https://www.careersinmusic.com/wp-content/uploads/2020/11/audio-engineer-3.jpg"
+          src={data[1].image}
           alt=""
           className="featuredImg"
         />
         <div className="featuredTitles">
-          <h1>Pheobe Ryan</h1>
-          <h2>Mixing engineer</h2>
+          <h1>{data[1].name}</h1>
+          <h2>{data[1].type}</h2>
         </div>
       </div>
       <div className="featuredItem">
         <img
-          src="https://cdn.shopify.com/s/files/1/0336/3763/0092/articles/2021_08_13.jpg?v=1650323226"
+          src={data[2].image}
           alt=""
           className="featuredImg"
         />
         <div className="featuredTitles">
-          <h1>Cody Smith</h1>
-          <h2>Mastering engineer</h2>
+          <h1>{data[2].name}</h1>
+          <h2>{data[2].type}</h2>
         </div>
-      </div>
+      </div></>
+      )
+      
+      }
     </div>
   );
 };
