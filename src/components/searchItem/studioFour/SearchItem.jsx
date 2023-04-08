@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import PannellumReact from "./PannelumReact";
 
 
+
 const SearchItem = () => {
   const [showPannellum, setShowPannellum] = useState(false);
 
   const togglePannellum = () => {
     setShowPannellum(!showPannellum);
   };
+
+  
   return (
     <div className="searchItem">
       <div className="image-container">
@@ -49,9 +52,9 @@ const SearchItem = () => {
           <span className="siPrice">$75 an hour</span>
           <span className="siTaxOp">Includes taxes and fees</span>
           <button className="siCheckButton" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}
->
-  Book now
-</button>
+          >
+            Book now
+          </button>
 
         </div>
       </div>

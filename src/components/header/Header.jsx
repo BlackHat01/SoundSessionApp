@@ -22,6 +22,8 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const Header = ({ type }) => {
   const { loginWithRedirect } = useAuth0();
@@ -42,6 +44,29 @@ const Header = ({ type }) => {
   });
 
   const navigate = useNavigate();
+
+
+  const [title, setTitle] = useState('Fill in audio needs are');
+  const [message, setMessage] = useState('Be sure to include dates, people, recordings, and sessions looking you\'re looking for');
+
+  const submit = () => {
+    confirmAlert({
+      title,
+      message,
+      buttons: [
+        {
+          label: 'Okay',
+          //onClick: () => alert('Click Yes')
+        },
+        // {
+        //   label: 'No',
+        //   //onClick: () => alert('Click No')
+        // }
+      ]
+    });
+  };
+
+
 
   const handleOption = (name, operation) => {
     setOptions((prev) => {
@@ -94,7 +119,7 @@ const Header = ({ type }) => {
             <p className="headerDesc">
               Book top audio engineers with ease!
             </p>
-            <button onClick={() => loginWithRedirect()} className="headerBtn" style={{backgroundColor:'#142125'}}>Sign in / Register</button>
+            <button onClick={() => loginWithRedirect()} className="headerBtn" style={{ backgroundColor: '#142125' }}>Sign in / Register</button>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faHeadphonesSimple} className="headerIcon" />
@@ -200,7 +225,10 @@ const Header = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-              <button onClick={handleSearch} disabled={!destination} className="headerBtn" style={{ backgroundColor: destination ? '#142125' : '#F0EEED' }}>Search</button>
+                <button onClick={destination ? handleSearch : submit}
+                  // disabled={!destination}
+                  className="headerBtn"
+                  style={{ backgroundColor: destination ? '#142125' : '#F0EEED' }}>Search</button>
               </div>
             </div>
           </>

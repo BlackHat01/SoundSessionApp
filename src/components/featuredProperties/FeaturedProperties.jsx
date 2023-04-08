@@ -3,7 +3,7 @@ import "./featuredProperties.css";
 const FeaturedProperties = () => {
   return (
     <div className="fp">
-      <div className="fpItem">
+      <div className="fpItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src="https://www.therecordco.org/wp-content/uploads/2021/11/IMG_0414-2048x1536.jpg"
           alt=""
@@ -17,7 +17,7 @@ const FeaturedProperties = () => {
           <span>Excellent</span>
         </div>
       </div>
-      <div className="fpItem">
+      <div className="fpItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/e/e7/AugustRecordingSonJarochoWikiLearning020.jpg"
           alt=""
@@ -31,7 +31,7 @@ const FeaturedProperties = () => {
           <span>Exceptional</span>
         </div>
       </div>
-      <div className="fpItem">
+      <div className="fpItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src="https://whisperroom.com/wp-content/uploads/2019/02/MuyinzaInStudio-553x415-1.png"
           alt=""
@@ -45,7 +45,7 @@ const FeaturedProperties = () => {
           <span>Excellent</span>
         </div>
       </div>
-      <div className="fpItem">
+      <div className="fpItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src="https://www.bmi.com/cache/images/news/2022/JulyMW-Photo-of-the-Month_770_433_70_s.jpg"
           alt=""
