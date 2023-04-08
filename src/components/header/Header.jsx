@@ -21,8 +21,10 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = ({ type }) => {
+  const { loginWithRedirect } = useAuth0();
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
@@ -92,7 +94,7 @@ const Header = ({ type }) => {
             <p className="headerDesc">
               Book top audio engineers with ease!
             </p>
-            <button className="headerBtn">Sign in / Register</button>
+            <button onClick={() => loginWithRedirect()} className="headerBtn" style={{backgroundColor:'#142125'}}>Sign in / Register</button>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faHeadphonesSimple} className="headerIcon" />
@@ -198,9 +200,7 @@ const Header = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-                <button className="headerBtn" onClick={handleSearch}>
-                  Search
-                </button>
+              <button onClick={handleSearch} disabled={!destination} className="headerBtn" style={{ backgroundColor: destination ? '#142125' : '#F0EEED' }}>Search</button>
               </div>
             </div>
           </>

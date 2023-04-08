@@ -48,7 +48,8 @@ const SearchItem = () => {
         <div className="siDetailTexts">
           <span className="siPrice">$60 an hour</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <button className="siCheckButton" onClick={() => window.location.href='https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU'}>
+          <button className="siCheckButton" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}
+>
   Book now
 </button>
 

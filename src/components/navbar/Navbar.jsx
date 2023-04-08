@@ -20,7 +20,7 @@ const Navbar = () => {
             onClick={handleSearch}
           />
         <div className="navItems">
-          <button className="navButton">Signup</button>
+          <button className="navButton" onClick={() => loginWithRedirect()}>Signup</button>
           <button className="navButton" onClick={() => loginWithRedirect()}>Login</button>
           <PopupButton id="mEzCFLh8" style={{ backgroundColor: 'transparent', borderWidth: 0 }}>
           <button className="navButton">List your studio</button>
