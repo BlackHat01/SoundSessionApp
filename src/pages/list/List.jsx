@@ -19,9 +19,37 @@ import SearchItem8 from "../../components/searchItem/studioEight/SearchItem";
 const List = () => {
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);
-  const [date, setDate] = useState(location.state.date);
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state.options);
+
+  const searchItems = [
+    { id: 1, component: SearchItem },
+    { id: 2, component: SearchItem2 },
+    { id: 3, component: SearchItem3 },
+    { id: 4, component: SearchItem4 },
+    { id: 5, component: SearchItem5 },
+    { id: 6, component: SearchItem6 },
+    { id: 7, component: SearchItem7 },
+    { id: 8, component: SearchItem8 },
+  ];
+
+  const [randomizedItems, setRandomizedItems] = useState(searchItems.sort(() => Math.random() - 0.5));
+
+  const handleSearch = () => {
+    const newRandomizedItems = [...searchItems].sort(() => Math.random() - 0.5);
+    setRandomizedItems(newRandomizedItems);
+    //setDestination("");
+  };
+
+  // Randomize the search items
+  // const randomizedItems = searchItems.sort(() => Math.random() - 0.5);
 
   return (
     <div>
@@ -54,15 +82,15 @@ const List = () => {
               <div className="lsOptions">
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
-                    Min price per hour
+                    Min price per hour (USD)
                   </span>
-                  <input type="number" className="lsOptionInput" />
+                  <input type="number" className="lsOptionInput" min="1"/>
                 </div>
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
-                    Max price per hour
+                    Max price per hour (USD)
                   </span>
-                  <input type="number" className="lsOptionInput" />
+                  <input type="number" className="lsOptionInput" min="1"/>
                 </div>
                 <div className="lsOptionItem">
                   <span className="lsOptionText">People</span>
@@ -71,13 +99,14 @@ const List = () => {
                     min={1}
                     className="lsOptionInput"
                     placeholder={options.adult}
+                    
                   />
                 </div>
                 <div className="lsOptionItem">
-                  <span className="lsOptionText">Hours</span>
+                  <span className="lsOptionText" min="1">Hours</span>
                   <input
                     type="number"
-                    min={0}
+                    min={1}
                     className="lsOptionInput"
                     placeholder={options.children}
                   />
@@ -93,18 +122,10 @@ const List = () => {
                 </div>
               </div>
             </div>
-            <button>Search</button>
+            <button onClick={handleSearch}>Search</button>
           </div>
           <div className="listResult">
-            <SearchItem />
-            {/* <SearchItemTwo /> */}
-            <SearchItem2 />
-            <SearchItem3 />
-            <SearchItem4 />
-            <SearchItem5 />
-            <SearchItem6 />
-            <SearchItem7 />
-            <SearchItem8 />
+            {searchItems.map((item) => <item.component key={item.id} />)}
           </div>
         </div>
       </div>
