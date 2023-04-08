@@ -18,6 +18,18 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
+"@auth0/auth0-react@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/@auth0/auth0-react/-/auth0-react-2.0.1.tgz"
+  integrity sha512-7Rla3del7inUloaWMsECs0JvBpDEj9lgfy+BQE/Z75zs9tveNvxab+xFdfrBC0GPN0eoiq1PeHcc++YjLnti+g==
+  dependencies:
+    "@auth0/auth0-spa-js" "^2.0.4"
+
+"@auth0/auth0-spa-js@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/@auth0/auth0-spa-js/-/auth0-spa-js-2.0.4.tgz"
+  integrity sha512-NgD6Fkm5Xnbned1VjhEW8irm1/Y8AWtdSLexgLXNwwBVgfnYicCVBu8w75m2t+4QljXkTcI7IXVEFhVmxMuxaA==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.16.7", "@babel/code-frame@^7.8.3":
   version "7.16.7"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.16.7.tgz"
@@ -1660,6 +1672,19 @@
   version "0.2.0"
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
+
+"@typeform/embed-react@^2.19.0":
+  version "2.19.0"
+  resolved "https://registry.npmjs.org/@typeform/embed-react/-/embed-react-2.19.0.tgz"
+  integrity sha512-0uA76vltS/Plg7cAuMORTkc6yyG0Q/ZbIh7byjPaxbnypw5u6+J1eGNCCyGcIpe+xR+u6EBb0VuhWdH9YhBYzg==
+  dependencies:
+    "@typeform/embed" "2.9.2"
+    fast-deep-equal "^3.1.3"
+
+"@typeform/embed@2.9.2":
+  version "2.9.2"
+  resolved "https://registry.npmjs.org/@typeform/embed/-/embed-2.9.2.tgz"
+  integrity sha512-aCOUXPAwHo6/3AJNl+6aXqkvB+E5V+DqWae4KUYXd27HrqMomUdsp7jK+yGF7RiFP+PfNmWpi9OiKQUC2SBa8g==
 
 "@types/aria-query@^4.2.0":
   version "4.2.2"
@@ -7266,7 +7291,7 @@ react-dev-utils@^12.0.1:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-react-dom@^18.0.0, react-dom@>=16.8:
+"react-dom@^16.11.0 || ^17 || ^18", react-dom@^18.0.0, react-dom@>=16.8:
   version "18.0.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.0.0.tgz"
   integrity sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==
@@ -7371,7 +7396,7 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-"react@^0.14 || ^15.0.0-rc || >=15.0", react@^18.0.0, "react@>= 16", react@>=16.8, react@>=16.x, "react@0.14 || 15 - 18", react@16.x:
+"react@^0.14 || ^15.0.0-rc || >=15.0", "react@^16.11.0 || ^17 || ^18", react@^18.0.0, "react@>= 16", react@>=16.8, react@>=16.8.0, react@>=16.x, "react@0.14 || 15 - 18", react@16.x:
   version "18.0.0"
   resolved "https://registry.npmjs.org/react/-/react-18.0.0.tgz"
   integrity sha512-x+VL6wbT4JRVPm7EGxXhZ8w8LTROaxPXOqhlGyVSrv0sB1jkyFGgXxJ8LVoPRLvPR6/CIZGFmfzqUa2NYeMr2A==
