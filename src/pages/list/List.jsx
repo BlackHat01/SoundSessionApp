@@ -5,7 +5,16 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
-import SearchItem from "../../components/searchItem/SearchItem";
+import SearchItem from "../../components/searchItem/studioOne/SearchItem";
+import SearchItem2 from "../../components/searchItem/studioTwo/SearchItem";
+import SearchItem3 from "../../components/searchItem/studioThree/SearchItem";
+import SearchItem4 from "../../components/searchItem/studioFour/SearchItem";
+import SearchItem5 from "../../components/searchItem/studioFive/SearchItem";
+import SearchItem6 from "../../components/searchItem/studioSix/SearchItem";
+import SearchItem7 from "../../components/searchItem/studioSeven/SearchItem";
+import SearchItem8 from "../../components/searchItem/studioEight/SearchItem";
+// import SearchItem from "../../components/searchItem/studioOne/SearchItem";
+// import SearchItemTwo from "../../components/searchItem/SearchItemTwo";
 
 const List = () => {
   const location = useLocation();
@@ -88,14 +97,14 @@ const List = () => {
           </div>
           <div className="listResult">
             <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
+            {/* <SearchItemTwo /> */}
+            <SearchItem2 />
+            <SearchItem3 />
+            <SearchItem4 />
+            <SearchItem5 />
+            <SearchItem6 />
+            <SearchItem7 />
+            <SearchItem8 />
           </div>
         </div>
       </div>

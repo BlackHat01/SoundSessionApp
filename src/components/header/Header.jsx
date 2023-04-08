@@ -11,7 +11,7 @@ import {
   faEarListen,
   faSliders,
 
-  
+
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.css";
@@ -64,25 +64,26 @@ const Header = ({ type }) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faMicrophoneLines} />
-            <span>Recording</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Recording</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faHeadphonesSimple} />
-            <span>Mixing</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Mixing</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faEarListen} />
-            <span>Mastering</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Mastering</span></a>
           </div>
           <div className="headerListItem">
-          <FontAwesomeIcon icon={faSliders} />
-            <span>Editing</span>
+            <FontAwesomeIcon icon={faSliders} />
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Editing</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faMicrophone} />
-            <span>Audio equipment setup</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Audio equipment setup</span></a>
           </div>
         </div>
+
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
