@@ -11,7 +11,7 @@ import {
   faEarListen,
   faSliders,
 
-  
+
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.css";
@@ -21,8 +21,12 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const Header = ({ type }) => {
+  const { loginWithRedirect } = useAuth0();
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
@@ -40,6 +44,29 @@ const Header = ({ type }) => {
   });
 
   const navigate = useNavigate();
+
+
+  const [title, setTitle] = useState('Fill in audio needs are');
+  const [message, setMessage] = useState('Be sure to include dates, people, recordings, and sessions looking you\'re looking for');
+
+  const submit = () => {
+    confirmAlert({
+      title,
+      message,
+      buttons: [
+        {
+          label: 'Okay',
+          //onClick: () => alert('Click Yes')
+        },
+        // {
+        //   label: 'No',
+        //   //onClick: () => alert('Click No')
+        // }
+      ]
+    });
+  };
+
+
 
   const handleOption = (name, operation) => {
     setOptions((prev) => {
@@ -64,25 +91,26 @@ const Header = ({ type }) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faMicrophoneLines} />
-            <span>Recording</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Recording</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faHeadphonesSimple} />
-            <span>Mixing</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Mixing</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faEarListen} />
-            <span>Mastering</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Mastering</span></a>
           </div>
           <div className="headerListItem">
-          <FontAwesomeIcon icon={faSliders} />
-            <span>Editing</span>
+            <FontAwesomeIcon icon={faSliders} />
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Editing</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faMicrophone} />
-            <span>Audio equipment setup</span>
+            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Audio equipment setup</span></a>
           </div>
         </div>
+
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
@@ -91,7 +119,7 @@ const Header = ({ type }) => {
             <p className="headerDesc">
               Book top audio engineers with ease!
             </p>
-            <button className="headerBtn">Sign in / Register</button>
+            <button onClick={() => loginWithRedirect()} className="headerBtn" style={{ backgroundColor: '#142125' }}>Sign in / Register</button>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faHeadphonesSimple} className="headerIcon" />
@@ -197,9 +225,10 @@ const Header = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-                <button className="headerBtn" onClick={handleSearch}>
-                  Search
-                </button>
+                <button onClick={destination ? handleSearch : submit}
+                  // disabled={!destination}
+                  className="headerBtn"
+                  style={{ backgroundColor: destination ? '#142125' : '#F0EEED' }}>Search</button>
               </div>
             </div>
           </>

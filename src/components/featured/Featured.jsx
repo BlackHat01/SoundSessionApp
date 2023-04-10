@@ -12,11 +12,12 @@ const Featured = () => {
       {loading ? (
         "Loading..."
       ) : (
-        <><div className="featuredItem">
+        <><div className="featuredItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src={data[0].image}
           alt=""
           className="featuredImg"
+          
         />
         <div className="featuredTitles">
           <h1>{data[0].name}</h1>
@@ -24,7 +25,7 @@ const Featured = () => {
         </div>
       </div>
       
-      <div className="featuredItem">
+      <div className="featuredItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src={data[1].image}
           alt=""
@@ -35,7 +36,7 @@ const Featured = () => {
           <h2>{data[1].type}</h2>
         </div>
       </div>
-      <div className="featuredItem">
+      <div className="featuredItem" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}>
         <img
           src={data[2].image}
           alt=""

@@ -13,6 +13,8 @@
   gap: 20px;
 }
 
+
+
 .listSearch {
   flex: 1;
   background-color: #05171C;
@@ -35,7 +37,7 @@
   flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
-  color:white;
+  color:black;
   font-family: 'Poppins';
   font-weight: 600;
   
