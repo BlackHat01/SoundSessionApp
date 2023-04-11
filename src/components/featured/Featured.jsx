@@ -4,8 +4,6 @@ import "./featured.css";
 const Featured = () => {
 
   const {data,loading,error} = useFetch("/api/artists/featured");
-
-  console.log(data)
   
   return (
     <div className="featured">
