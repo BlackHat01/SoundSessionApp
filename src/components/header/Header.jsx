@@ -46,8 +46,8 @@ const Header = ({ type }) => {
   const navigate = useNavigate();
 
 
-  const [title, setTitle] = useState('Fill in audio needs are');
-  const [message, setMessage] = useState('Be sure to include dates, people, recordings, and sessions looking you\'re looking for');
+  const [title, setTitle] = useState('Fill in audio needs');
+  const [message, setMessage] = useState('Be sure to include dates, people, recordings, or sessions');
 
   const submit = () => {
     confirmAlert({
@@ -91,11 +91,11 @@ const Header = ({ type }) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faMicrophoneLines} />
-            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Recording</span></a>
+            <a href="https://capable-ravioli-884.notion.site/Recording-c4a5431f26b8480796d8df58223de136" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Recording</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faHeadphonesSimple} />
-            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Mixing</span></a>
+            <a href="https://www.notion.so/Mixing-ae29ac49948c4d6db011f0f476f18520?pvs=4" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Mixing</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faEarListen} />
@@ -103,11 +103,11 @@ const Header = ({ type }) => {
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faSliders} />
-            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Editing</span></a>
+            <a href="https://www.notion.so/Editing-3f9ce06179a84030b61fe52fdb4eadfe?pvs=4" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Editing</span></a>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faMicrophone} />
-            <a href="https://faceted-screw-4dd.notion.site/Mastering-53513c42969949db8b76a36ab2334670" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Audio equipment setup</span></a>
+            <a href="https://capable-ravioli-884.notion.site/Audio-Equipment-Setup-84d4783fed294e4183382820525bc50d" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Audio equipment setup</span></a>
           </div>
         </div>
 

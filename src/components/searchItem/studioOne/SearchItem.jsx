@@ -26,14 +26,14 @@ const SearchItem = () => {
         </button>
       </div>
       <div className="siDesc">
-        <h1 className="siTitle">Cody Thomas Studio LLC</h1>
-        <span className="siDistance">500m from the University of Arizona</span>
+        <h1 className="siTitle">The UA Jeffrey Haskell Recording Studio</h1>
+        <span className="siDistance">the University of Arizona</span>
         <span className="siTaxiOp">Free consultation</span>
         <span className="siSubtitle">
-          Mixing and Mastering
+          Mixing, Mastering, and Recording Engineer
         </span>
         <span className="siFeatures">
-          Recording studio • audio both • sound equipment
+          Recording studio • recording equipment • sound equipment • grand piano • drum set
         </span>
         <span className="siCancelOp">Free cancellation </span>
         <span className="siCancelOpSubtitle">
@@ -43,10 +43,10 @@ const SearchItem = () => {
       <div className="siDetails">
         <div className="siRating">
           <span>Excellent</span>
-          <button>8.9</button>
+          <button>10.0</button>
         </div>
         <div className="siDetailTexts">
-          <span className="siPrice">$112 an hour</span>
+          <span className="siPrice">$50 an hour</span>
           <span className="siTaxOp">Includes taxes and fees</span>
           <button className="siCheckButton" onClick={() => window.open('https://buy.stripe.com/test_5kA3ez1Io33b3GEeUU', '_blank')}
 >
