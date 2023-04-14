@@ -1,4 +1,5 @@
 import "./navbar.css"
+import { Link } from 'react-router-dom';
 import logo from "../../assets/LogoFinal.png"
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
@@ -14,11 +15,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer" style={{ backgroundColor: 'transparent' }}>
+        <Link to="/">
           <img
             src={logo}
             style={{ width: 2636/7.5, height: 1192/7.5 }}
             onClick={handleSearch}
           />
+        </Link>
         <div className="navItems">
           <button className="navButton" onClick={() => loginWithRedirect()}>Signup</button>
           <button className="navButton" onClick={() => loginWithRedirect()}>Login</button>
