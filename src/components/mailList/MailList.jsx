@@ -5,7 +5,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const MailList = () => {
   const [title, setTitle] = useState('You are subscribed!');
-  const [message, setMessage] = useState('We will send yu newsletter and updates on all that is audio!');
+  const [message, setMessage] = useState('We will send you newsletters and updates on all things audio!');
   const [hasAtSymbol, setHasAtSymbol] = useState(false);
   const [title2, setTitle2] = useState('Oops');
   const [message2, setMessage2] = useState('This doesn\'t look like a correct email address');

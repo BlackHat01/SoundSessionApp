@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import { Pannellum, PannellumVideo } from "pannellum-react";
-import myImage from "../../../assets/Studio1.jpeg";
+import myImage from "../../../assets/Studio1.jpg";
 
 
 
