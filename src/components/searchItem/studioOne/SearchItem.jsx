@@ -16,7 +16,7 @@ const SearchItem = () => {
           <PannellumReact />
         ) : (
           <img
-            src="https://www.therecordco.org/wp-content/uploads/2021/11/IMG_0414-2048x1536.jpg"
+            src="https://cdn.discordapp.com/attachments/1072997422273400842/1096503328176869447/Haskell_Studio.JPG"
             alt=""
             className="siImg"
           />
@@ -26,7 +26,7 @@ const SearchItem = () => {
         </button>
       </div>
       <div className="siDesc">
-        <h1 className="siTitle">The UA Jeffrey Haskell Recording Studio</h1>
+        <h1 className="siTitle">The UA Recording Studio</h1>
         <span className="siDistance">the University of Arizona</span>
         <span className="siTaxiOp">Free consultation</span>
         <span className="siSubtitle">
