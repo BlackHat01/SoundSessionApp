@@ -10,6 +10,9 @@ import {
   faMicrophone,
   faEarListen,
   faSliders,
+  faSpeaker,
+  faVolumeHigh,
+  faHeadphonesAlt,
 
 
 } from "@fortawesome/free-solid-svg-icons";
@@ -108,6 +111,10 @@ const Header = ({ type }) => {
           <div className="headerListItem">
             <FontAwesomeIcon icon={faMicrophone} />
             <a href="https://capable-ravioli-884.notion.site/Audio-Equipment-Setup-84d4783fed294e4183382820525bc50d" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Audio equipment setup</span></a>
+          </div>
+          <div className="headerListItem">
+            <FontAwesomeIcon icon={faVolumeHigh} />
+            <a href="https://faceted-screw-4dd.notion.site/Live-Sound-Engineering-58a59c2decad47b88268610060abfb87" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}><span>Live sound</span></a>
           </div>
         </div>
 
